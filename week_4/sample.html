@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+	<script type="text/javascript">
+		var dumbObj = {
+			name:"john",
+			job:"asdgag"
+		};
+		//This should be in an animal.js file
+		var Animal = new Class({
+	
+			Implements: [Options, Events],
+			
+			options:{
+				name: "Else",
+				age: 2
+			},
+			sound: "yo.",
+		
+			initialize: function(options)
+			{
+				this.setOptions(options);
+			},
+			
+			speak: function()
+			{
+				alert(this.options.name + " says " + this.sound);
+			}
+		});
+		// this could be in cat.js
+		/*
+		 * @author: Brent Allen
+		 * @title: Cat
+		 * @require: Animal
+		 */
+		var Cat = new Class({
+	
+			Extends: Animal,
+			
+			Implements: [Options, Events],
+			options:{
+				name: "Tom"
+			},
+			sound: "meow",
+		
+			initialize: function(options)
+			{
+				this.parent(options);
+				this.speak();
+			}
+		});
+		//this should be in the sample.js file
+		var dog = new Animal({
+			name: "Rex",
+			age: 7
+		});
+		var cat = new Cat({
+			name: "Jerry"
+		});
+		dog.sound = "bark";
+		dog.speak();
+		cat.speak();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
