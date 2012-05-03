@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Untitled Document</title>
+	<style>
+		label{
+			display: block;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="js/theme/green/formcheck.css" />
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+	<script type="text/javascript" src="js/fx.scroll.js"></script>
+	<script type="text/javascript" src="js/lang/en.js"></script>
+	<script type="text/javascript" src="js/formcheck-yui.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+	<h3>Order your Pineapple</h3>
+	<form id="pineform">
+		<label>First Name: <input type="text" name="fname" class="validate['required','length[2,10]']" /></label>
+		<label>Last Name: <input type="text" name="lname" class="validate['required','length[2,15]']" /></label>
+		
+		<label>Pineapple size:
+		<select name="pinesize" class="validate['required']">
+			<option value="">Please choose one</option>
+			<option value="small">Small</option>
+			<option value="medium">Medium</option>
+			<option value="large">Large-ish</option>
+		</select></label>
+		<label><input type="checkbox" name="agree" value="yes" class="validate['required']" />
+		I agree to the terms and conditions of purchasing a pineapple.</label>
+		<input type="submit" />
+	</form>
+</body>
+</html>
