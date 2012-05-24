@@ -1,0 +1,3 @@
+// JavaScript Document
+
+var Collapser=new Class({Implements:[Options,Events],options:{clickSelector:"h3",contentSelector:".content"},initialize:function(b,a){this.element=document.id(b);this.setOptions(a);this.clicker=this.element.getElement(this.options.clickSelector);this.content=this.element.getElement(this.options.contentSelector);this.fx=new Fx.Reveal(this.content);this.clicker.addEvent("click",this.headerClicked.bind(this))},headerClicked:function(){this.fx.toggle()}});
