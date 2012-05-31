@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	padding: 0;
+	margin: 0;
+}
+
+.header{
+	width: 500px;
+	margin: 80px auto;
+}
+
+#slider{
+	width: 500px;
+	height: 363px;
+	overflow: hidden;
+	position: relative;
+	-webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#slider>ul,
+#slider>div{
+	position: absolute;
+	padding: 0;
+	margin: 0;
+}
+
+#slider .left,
+#slider .right{
+	top: 155px;
+	color: white;
+	z-index: 5;
+}
+
+#slider .left{
+	left: 0;
+}
+
+#slider .right{
+	right: 0;
+}
+
+#slider>ul{
+	width: 10000px;
+	left: 0;
+	top: 0;
+	z-index: 1;
+}
+
+#slider>ul>li>img{
+	width: 500px;
+	height: 363px;
+	-webkit-border-radius: 15px;
+    border-radius: 15px;
+}
+
+#slider li{
+	list-style-type: none;
+	float:left;
+	padding: 0;
+	margin: 0;
+}
